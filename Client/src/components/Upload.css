@@ -1,0 +1,81 @@
+.upload-container {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 1.5rem;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Heading */
+.upload-container h1 {
+  font-size: 1.7rem; /* Ensure big enough to see */
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 2rem;
+  line-height: 1.3;
+}
+
+/* Hide actual file input */
+.upload-input {
+  display: none;
+}
+
+/* Upload Button */
+.upload-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 1rem 1rem;
+  border-radius: 40px;
+  background: linear-gradient(90deg, #bb76ff, #3b25c9);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(37, 117, 252, 0.4);
+  transition: all 0.3s ease;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.upload-btn img {
+  width: 28px;
+  height: 28px;
+}
+
+.upload-btn span {
+  display: inline-block;
+}
+
+/* Hover effect */
+.upload-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(37, 117, 252, 0.55);
+}
+
+/* Click effect */
+.upload-btn:active {
+  transform: scale(0.97);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .upload-container h1 {
+    font-size: 1.7rem;
+  }
+
+  .upload-btn {
+    padding: 0.8rem 1.6rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .upload-container h1 {
+    font-size: 1.4rem;
+  }
+
+  .upload-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

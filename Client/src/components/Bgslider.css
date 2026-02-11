@@ -1,0 +1,111 @@
+.bgslider-container {
+  width: 80%;
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.bgslider-container h1 {
+  margin-bottom: 1rem;
+   color: #333;
+  background-clip: text;
+  font-family: sans-serif;
+   font-weight: 600;
+  font-size: 1.7rem;
+  
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 66%; /* Maintain aspect ratio (3:2) */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  cursor: ew-resize;
+}
+
+/* Both images overlap */
+.image-wrapper .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* ensures full image fits */
+  transition: clip-path 0.2s ease;
+}
+
+/* Vertical slider handle */
+.slider-handle {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background-color: #fff;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Range slider at bottom */
+.slider {
+  width: 100%;
+  margin-top: 1rem;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #000;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #fff;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #000;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .bgslider-container {
+    width: 90%;
+  }
+
+  .bgslider-container h1 {
+    font-size: 1.3rem;
+  }
+
+  .slider::-webkit-slider-thumb,
+  .slider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bgslider-container h1 {
+    font-size: 1.1rem;
+  }
+
+  .slider::-webkit-slider-thumb,
+  .slider::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+  }
+}

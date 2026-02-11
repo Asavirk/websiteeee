@@ -1,0 +1,73 @@
+/* Navbar.css */
+
+/* Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;   /* ⬅ left right gap barha diya */
+  max-width: 1200px;    /* ⬅ thora wide */
+  margin: 0 auto;
+}
+
+/* Logo */
+.navbar img.logo {
+  width: 170px;
+  max-width: 45vw;
+  padding-left: 0;   /* ❌ remove */
+}
+
+/* Button */
+.navbar button {
+  background-color: #686868;
+  color: white;
+  padding: 5px 9px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  letter-spacing: 0.5px;
+  font-size: 10px;
+  padding-left: 30px;
+  justify-content: center;
+  margin-left: 600px;   /* ✅ visible gap */
+}
+
+
+/* Button hover effect */
+.navbar button:hover {
+  background-color: #000000;
+  transform: translateY(-2px);
+}
+
+/* Button icon */
+.navbar button img {
+  width: 16px;
+  height: 16px;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 15px;
+  }
+
+  .navbar img.logo {
+    width: 120px;
+  }
+
+  .navbar button {
+    padding: 8px 16px;
+    gap: 8px;
+  }
+
+  .navbar button img {
+    width: 14px;
+    height: 14px;
+  }
+}

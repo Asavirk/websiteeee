@@ -1,0 +1,142 @@
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 90px 60px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/* =========================
+   LEFT SIDE TEXT
+========================= */
+.hero-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* Heading */
+.hero-text h1 {
+  font-size: 40px;
+  line-height: 1.15;
+  font-weight: 700;
+  color: #3e3e3e;
+  margin-bottom: 18px;
+}
+
+/* Gradient word */
+.hero-text h1 span {
+  background: linear-gradient(90deg, #bb76ff, #3b25c9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Paragraph */
+.hero-text p {
+  max-width: 480px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 32px;
+}
+
+/* =========================
+   UPLOAD BUTTON
+========================= */
+.hero-text label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 22px;
+  border-radius: 999px;
+  cursor: pointer;
+
+  background: linear-gradient(90deg, #a855f7, #7c3aed);
+  color: #ffffff;
+
+  font-size: 10px;
+  font-weight: 500;
+
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.35);
+  transition: all 0.25s ease;
+}
+
+/* Button hover */
+.hero-text label:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(124, 58, 237, 0.45);
+}
+
+/* Button text */
+.hero-text label h2 {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Button icon */
+.hero-text label img {
+  width: 18px;
+  height: 18px;
+}
+
+/* =========================
+   RIGHT SIDE IMAGE
+========================= */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Image styling */
+.header-img {
+  width: 350px;
+  max-width: 100%;
+
+  padding: 18px;
+  border-radius: 22px;
+
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .hero-text {
+    align-items: center;
+  }
+
+  .hero-text h1 {
+    font-size: 42px;
+  }
+
+  .hero-text p {
+    margin: 0 auto 30px;
+  }
+
+  .hero-image {
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .header-img {
+    width: 320px;
+  }
+}

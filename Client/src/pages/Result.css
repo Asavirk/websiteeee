@@ -1,0 +1,207 @@
+/* Navbar.css */
+
+/* Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 15px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.navbar img.logo {
+  width: 170px;
+  max-width: 45vw; /* responsive width */
+  padding-left: 20px; /* space from the left edge */
+}
+
+/* Button */
+.navbar button {
+  background-color: #111;
+  color: white;
+  padding: 5px 9px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  letter-spacing: 0.5px;
+  font-size: 10px;
+  padding-left: 30px;
+  justify-content: center;
+
+}
+
+/* Button hover effect */
+.navbar button:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+/* Button icon */
+.navbar button img {
+  width: 16px;
+  height: 16px;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 15px;
+  }
+
+  .navbar img.logo {
+    width: 120px;
+  }
+
+  .navbar button {
+    padding: 8px 16px;
+    gap: 8px;
+  }
+
+  .navbar button img {
+    width: 14px;
+    height: 14px;
+  }
+}
+.footer {
+  background: #ffffff;
+  padding: 1rem 1.5rem;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Left logo */
+.footer-left img {
+  width: 140px;
+}
+
+/* Center text */
+.footer-center p {
+  color: #aaa;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+/* Right icons */
+.footer-right {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.footer-right img {
+  width: 26px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-right img:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-center p {
+    white-space: normal;
+  }
+}
+.result-section {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 3rem 0;
+}
+
+.image-box {
+  text-align: center;
+  max-width: 320px;
+}
+
+.image-box img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* White box */
+.image-box.white {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: 0.9rem;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Buttons */
+.btn-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+padding: 0.7rem 1.4rem;
+  border-radius: 30px;
+  font-size: 0.8rem;         /* thoda bada text */
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Open Sans', 'Helvetica Neue', sans-serif;
+  transition: transform 0.2s ease; /* hover effect smooth */
+}
+
+.btn:hover {
+  transform: translateY(-2px);   /* hover me thoda upar uthna */
+}
+
+
+/* Button styles */
+.btn.primary {
+  background: linear-gradient(90deg, #7b2ff7, #3b82f6);
+  color: #fff;
+}
+
+.btn.secondary {
+  background: #f1f1f1;
+  color: #333;
+}
+
+
+
+/* Responsive */
+@media (max-width: 600px) {
+  .image-box {
+    max-width: 100%;
+  }
+}
