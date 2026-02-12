@@ -1,5 +1,6 @@
 import { Webhook } from "svix"
 import userModel from "../models/userModels.js"
+
 //API controller functions to manage clerk users with database
 //http://localhost:4000/api/users/webhooks
 const clerkWebhooks = async (req, res) => {
@@ -58,7 +59,24 @@ case "user.updated": {
     
 
     }catch (error) {
+        console.log("Error processing webhook:", error);
+        res.json({ error: "Invalid webhook" });
 
     }
 }
-export { clerkWebhooks }
+
+const userCredits=async (req, res) => {
+    try {
+        const { clerkID } = req.params;
+        const user = await userModel.findOne({ clerkID });
+        if (!user) {
+            return res.status(404).json({ error: "User not found" });
+        }
+        res.json({ creditBalance: user.creditBalance });
+    }
+        catch (error) {
+        console.log("Error fetching user credits:", error);
+        res.json({ error: "Server error" });
+    }
+}
+export { clerkWebhooks, userCredits }

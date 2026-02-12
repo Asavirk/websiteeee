@@ -6,6 +6,7 @@ import Testtimonial from '../components/Testtimonial'
 import Upload from '../components/Upload'
 import Footer from '../components/Footer'
 
+
 const Home = () => {
   return (
     <>
@@ -16,6 +17,7 @@ const Home = () => {
       <Testtimonial/>
       <Upload/>
       <Footer/>
+      
     </>
   )
 }

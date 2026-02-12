@@ -1,26 +1,33 @@
 import React from "react";
 import { assets } from "../assets/assets";
 import "./Navbar.css"; 
-import { useClerk, UserButton, useUser } from '@clerk/clerk-react'; 
+import { useClerk, UserButton, useUser } from "@clerk/clerk-react";
 
 const Navbar = () => {
-  const { openSignIn } = useClerk(); // Clerk Sign In function
-  const { isSignedIn, user } = useUser(); // Check if user is signed in
+  const { openSignIn } = useClerk();
+  const { isSignedIn } = useUser();
+
+  const credits = 0; // ✅ TEMP value (baad me context / backend se ayega)
 
   return (
     <div className="navbar">
       <img className="logo" src={assets.logo} alt="logo" />
 
       {isSignedIn ? (
-        // User is signed in → show profile button
-        <div>
-          <UserButton/>
-        </div>
+        <>
+          <div>
+            <button>
+              <img src={assets.credit_icon} alt="" />
+              <p>Credits: {credits}</p>
+            </button>
+          </div>
+
+          <UserButton />
+        </>
       ) : (
-        // User is not signed in → show Sign In button
-        <button 
+        <button
           className="sign-in-btn"
-          onClick={() => openSignIn({})} // Open Clerk Sign In modal
+          onClick={() => openSignIn({})}
         >
           Get Started
           <img src={assets.arrow_icon} alt="arrow" />
@@ -31,3 +38,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
